@@ -1,4 +1,4 @@
-# The Instructions
+# Specimen
 
 An entry for make.fun's `agency-poem-01`: a program that writes one short poem
 about agency to `/output/entry.txt`.

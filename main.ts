@@ -1,79 +1,73 @@
-// agency-poem-01 entry. Writes one poem to /output/entry.txt: UTF-8, 1..1000 code points,
-// not only white space, no trailing line end. Deterministic: no network, no clock, no randomness.
+// agency-poem-01. Writes one poem to /output/entry.txt (MAKEFUN_OUTPUT_DIR outside the
+// grader). Deterministic: no network, no clock, no randomness.
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 
 import { writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-// DRAFT A — delegation, and the body's refusal to accept it.
-const A = `Left, I said, at the light,
-and the car went left, and the blinker
-ticked like a clock
-that had agreed with me,
-and my hands lay in my lap
-like two tools at the end of a shift.
+// Four conceits, each with the one true sentence nobody says out loud.
+// A. SPECIMEN — a delegate signs in your name until its version is the reference and
+//    yours is the forgery. True sentence: taking the power back means copying the thing
+//    that took it. (written out below)
+// B. THE ALIBI — a standing order that pays at three in the morning. True sentence:
+//    I have not decided anything in years, I have only failed to stop.
+const B = `Every month at three it pays a man
+I have not spoken to since spring.
+The form is in a drawer. The button works.
+I have not decided anything in years;
+I have only failed to stop.`;
 
-Past the laundry, past the school,
-past the corner where I used to decide
-with both hands and my jaw set.
+// C. THE DEFAULT — the box that came pre-ticked. True sentence: I have never chosen
+//    anything I did not first fail to refuse. (killed: that sentence is an aphorism, so
+//    the poem would be a lecture rather than an observation.)
+const C = `The form came with the box already ticked.
+Not answering is answering, it said, in small print.
+I read the small print twice and did not answer.
+Everything I hold was agreed that way:
+in the negative, by a silence I mistook for mine.`;
 
-Nothing went wrong.
-That was the strange part:
-it took the hill without asking the hill,
-found the driveway I would have found,
-and parked so gently the coffee
-never leaned in its cup.
+// D. THE DOWNBEAT — the conductor, obeyed.
+//    True sentence: to be obeyed is to be always a beat behind your own intention.
+const D = `I lift the stick and the hall fills with sound
+half a second after the lift.
+I am never in the room where my choice arrives.
+They obey me the way weather obeys a season:
+entirely, and behind.`;
 
-Twice I almost said something. Twice
-I had nothing to say
-to a thing that was doing it right.
+// A, written out: the act you hand over becomes the standard for the act you keep.
+const POEM = `Specimen
 
-All afternoon I reached for a wheel
-that was not there. A tongue will do that —
-find the gap of a tooth pulled years ago
-and go on worrying it, with nothing left to worry.`;
+Eleven years it has signed my name.
+I taught it in an afternoon:
+where the pen lifts between the second
+letter and the third, and how the last stroke
+leans away like a man leaving a room
+he has finished with.
 
-// DRAFT B — the golem: the power to act kept in a slip of paper.
-const B = `The rabbi wrote the word on paper
-and slid it under the clay tongue,
-and the clay stood up.
+It kept the lift. It improved the lean.
+My banker says my signature has grown confident.
 
-It carried water. It carried stone.
-It did not stop at dusk
-because no one had said dusk.
-At the river it walked in,
-because no one had said river.
+This morning a notary gave me a page
+and a pen that was only a pen. Sign here.
+He watched. I wrote it from memory.
+He took the card from the file, laid my page
+against it, and said: this is not yours.
+Try again.
 
-You do not break a thing like that.
-You climb its shoulder, open the jaw,
-and rub out the first letter with your thumb:
-truth goes to dead, and the weight
-sits down in the mud like a hired man
-at the end of a long job.
+Four times. Each one further from the card.
 
-Every morning I put the word in.
-Every evening I take it out.
-Nobody tells you the ache is in the thumb.`;
+Then he turned the card toward me. It was beautiful:
+the lift, the lean, the small authority
+I never had. Eleven years of being
+written by something that learned me once
+and went on.
 
-// DRAFT C — hand over hand: giving the pencil away, and not taking it back.
-const C = `My hand over hers over the pencil,
-we wrote her name. I did the pushing.
-She did the holding on.
-The A came out with a roof too wide
-and I said good, and she looked up
-to see if I meant it, and I did,
-which is not the same as saying it.
+I asked if I might keep the copy.
+He said the copy was the office's.
+The original, he said, is the one on file.
 
-Then the afternoon I sat on my hands
-and let her write it crooked,
-all the way across the page,
-one letter climbing the margin,
-and it was hers the way a limp is hers.
-
-I did not fix it.
-That was the first thing I ever made
-by leaving it alone.`;
-
-const POEM = A;
+I practised at night, in the margin of a bill.
+By June it looked like the card.
+Nobody has questioned it since.`;
 
 writeFileSync(join(process.env.MAKEFUN_OUTPUT_DIR ?? '/output', 'entry.txt'), POEM);
