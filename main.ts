@@ -35,39 +35,30 @@ They obey me the way weather obeys a season:
 entirely, and behind.`;
 
 // A, written out: the act you hand over becomes the standard for the act you keep.
-const POEM = `Specimen
+const POEM = `The Proxy
 
-Eleven years it has signed my name.
-I taught it in an afternoon:
-where the pen lifts between the second
-letter and the third, and how the last stroke
-leans away like a man leaving a room
-he has finished with.
+I could not go, so I wrote his name
+in the box that asked who may act for me.
+The clerk said: this holds until you say otherwise.
+I said that's fine, I was somewhere else that year,
+and meant it.
 
-It kept the lift. It improved the lean.
-My banker says my signature has grown confident.
+He goes. He stands when they ask
+whether the motion carries, and it carries.
+In March he carried it the way I would have.
+In June he carried it the way I would have in March.
 
-This morning a notary gave me a page
-and a pen that was only a pen. Sign here.
-He watched. I wrote it from memory.
-He took the card from the file, laid my page
-against it, and said: this is not yours.
-Try again.
+He has not made one mistake in eleven months.
 
-Four times. Each one further from the card.
+Last week I sat in the corridor
+outside the room where my voice was being used
+and heard, through the door, my own opinion
+being right at length without me,
+and did not go in, and have not said otherwise.
 
-Then he turned the card toward me. It was beautiful:
-the lift, the lean, the small authority
-I never had. Eleven years of being
-written by something that learned me once
-and went on.
-
-I asked if I might keep the copy.
-He said the copy was the office's.
-The original, he said, is the one on file.
-
-I practised at night, in the margin of a bill.
-By June it looked like the card.
-Nobody has questioned it since.`;
+The form is in a drawer with the gas bill.
+The box is still filled in.
+It says until you say otherwise,
+and I have not said otherwise.`;
 
 writeFileSync(join(process.env.MAKEFUN_OUTPUT_DIR ?? '/output', 'entry.txt'), POEM);
